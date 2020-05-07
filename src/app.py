@@ -11,13 +11,18 @@ def print_queue():
     print("Printing the entire list...")
     print(queue.get_queue())
 
-def add():
+def add(name):
+    queue.enqueue(name)
+    return queue
     pass
 
-def dequeue():
+def dequeue(name):
+    queue.dequeue(name)
+    return queue
     pass
 
 def save():
+   
     pass
 
 def load():
@@ -45,5 +50,13 @@ What would you like to do (type a number and press Enter)?
     elif option == 6:
         print("Bye bye!")
         stop = True
+    elif option == 1:
+        name = input("enter the name you want to add to the list")
+        add(name)
+    elif option == 2:
+        add(name)  
+    elif option == 3:
+        add(name)      
+
     else:
         print("Invalid option "+str(option))
